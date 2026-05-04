@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  /* Premium Dark Theme Core Colors */
+  --background: #0B2A2D;  
+  --foreground: #ffffff;  
+  
+  /* Accent Colors */
+  --accent-terracotta: #CC584C;
+  --accent-forest: #2C5E3B;
+}
+
+/* Force Dark Mode & Cleaned Body Setup */
+/* Force Dark Mode & Enable Native Swipe-to-Back */
+/* Force Dark Mode & Enable ALL Native Gestures */
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, system-ui, sans-serif);
+  
+  /* Yahan koi overflow ya touch-action ki rok-tok nahi hai */
+}
+
+::selection {
+  background-color: var(--accent-terracotta);
+  color: white;
+}/* ----------------------------------------- */
+/* PREMIUM CUSTOM SCROLLBAR                  */
+/* ----------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A4F55; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-terracotta); 
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1A4F55 #0B2A2D;
+}
+
+/* ----------------------------------------- */
+/* CUSTOM UTILITIES                          */
+/* ----------------------------------------- */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .mask-fade-edges {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+}
