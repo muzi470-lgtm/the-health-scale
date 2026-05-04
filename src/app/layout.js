@@ -21,7 +21,7 @@ icons: {
   // Android aur PWA support ke liye
   manifest: '/site.webmanifest', //[cite: 1]
   verification: {
-    google: 'a2ffdc4d7afffec5',
+    google: '7DqAxkXfU9LBUSlJlw_S4rkAC4V8Q7nSmmTXrjG2uZI',
   },
   openGraph: {
     title: 'The Daily Scale',
