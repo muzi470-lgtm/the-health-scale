@@ -4,10 +4,13 @@ import Navbar from './components/Navbar';
 export const metadata = {
   // 1. BAS YEH EK LINE YAHAN ADD KARNI HAI
 // metadataBase ko naye domain par set karein
-metadataBase: new URL('https://thedailyscale.online'),  
+metadataBase: new URL('https://www.thedailyscale.online'),  
   title: 'The Daily Scale | Premium Health Utilities',
   description: 'A meticulously crafted suite of health utilities including BMI, Skincare, Sleep Cycle, and more. Designed for balance, precision, and elegance.',
-icons: {
+alternates: {
+    canonical: 'https://www.thedailyscale.online',
+  },
+  icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' }, // Chota icon
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }, // Standard icon
@@ -26,7 +29,7 @@ icons: {
   openGraph: {
     title: 'The Daily Scale',
     description: 'Your personal health and wellness calculation hub.',
-url: 'https://thedailyscale.online',
+url: 'https://www.thedailyscale.online',
     siteName: 'The Daily Scale',
     images: [
       {
