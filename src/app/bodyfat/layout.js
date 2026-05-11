@@ -4,6 +4,10 @@ export const metadata = {
   title: 'Body Fat Percentage Calculator | The Daily Scale',
   description: 'Get an accurate estimate of your body fat percentage using the scientific U.S. Navy formula and body measurements.',
   keywords: 'body fat calculator, navy body fat formula, calculate body fat percentage, lean body mass calculator',
+
+  alternates: {
+    canonical: 'https://www.thedailyscale.online/bodyfat', // 👈 Only this line added
+  },
 };
 
 export default function BodyFatLayout({ children }) {

@@ -4,6 +4,10 @@ export const metadata = {
   title: 'Hormone Cycle & Balance Tracker | The Daily Scale',
   description: 'Understand your hormonal fluctuations. Track cortisol, melatonin, and circadian rhythms to optimize your energy, mood, and sleep.',
   keywords: 'hormone cycle tracker, cortisol levels, cycle syncing, melatonin, hormone balance, circadian rhythm',
+
+  alternates: {
+    canonical: 'https://www.thedailyscale.online/hormonesleep', // 👈 Only this line added
+  },
 };
 
 export default function HormoneLayout({ children }) {

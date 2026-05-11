@@ -5,6 +5,9 @@ export const metadata = {
   title: 'BMI Calculator | The Daily Scale',
   description: 'Calculate your Body Mass Index (BMI) easily. Find out your healthy weight range with our premium, accurate, and fast BMI checker.',
   keywords: 'bmi calculator, check bmi, body mass index, ideal weight calculator',
+  alternates: {
+    canonical: 'https://www.thedailyscale.online/bmi', // 👈 Only this line added
+  },
 };
 
 export default function BMILayout({ children }) {
