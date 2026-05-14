@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Baby } from 'lucide-react';
+import Link from 'next/link';
 
 export default function PregnancyTracker() {
   const [lmp, setLmp] = useState('');
@@ -127,6 +128,40 @@ export default function PregnancyTracker() {
               <span><strong className="text-white">Third Trimester (Weeks 28-40):</strong> The final stretch focusing on rapid growth, weight gain, and preparing for birth.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">Physiological Shifts During Pregnancy</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Beyond tracking dates, your body undergoes massive physiological shifts during these 40 weeks. As your blood volume expands by nearly 50% to support the placenta and amniotic fluid, your daily hydration needs skyrocket. Furthermore, your Basal Metabolic Rate (BMR) gradually increases, especially in the second and third trimesters, requiring a strategic caloric surplus to support fetal growth without excessive, unhealthy weight gain.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Additionally, extreme hormonal surges—specifically elevated progesterone—can heavily disrupt your normal sleep architecture, leading to intense first-trimester fatigue or third-trimester insomnia. Managing your sleep cycles and understanding your baseline body composition early on can help you navigate these 9 months with significantly greater comfort, vitality, and peace of mind.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Support Your Pregnancy Journey</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/water" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hydration Needs</span>
+                <span className="text-teal-100/60 text-xs">Calculate precise water intake for amniotic fluid support.</span>
+              </Link>
+              
+              <Link href="/tdee" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">TDEE Calculator</span>
+                <span className="text-teal-100/60 text-xs">Understand your new metabolic rate and caloric needs.</span>
+              </Link>
+
+              <Link href="/deepsleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Sleep Optimizer</span>
+                <span className="text-teal-100/60 text-xs">Manage pregnancy insomnia by timing your sleep cycles.</span>
+              </Link>
+
+              <Link href="/bmi" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">BMI Calculator</span>
+                <span className="text-teal-100/60 text-xs">Check your pre-pregnancy baseline to guide weight goals.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

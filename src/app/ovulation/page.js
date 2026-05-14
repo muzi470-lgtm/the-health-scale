@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Flower2 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function OvulationTracker() {
   const [lmp, setLmp] = useState('');
@@ -137,6 +138,40 @@ export default function OvulationTracker() {
               <span><strong className="text-white">Luteal Phase:</strong> The time after ovulation until your next period starts, usually lasting a consistent 14 days.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">Biological Signs of Ovulation</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Your body gives subtle but distinct signs as you approach your peak fertile window. A surge in Luteinizing Hormone (LH) triggers the release of the egg, which is often accompanied by changes in your Basal Body Temperature (BBT) and cervical mucus. Right before ovulation, estrogen peaks, which is why many women experience the "ovulation glow"—a period where skin is clearest and hair looks its healthiest. 
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              However, once ovulation occurs and you enter the luteal phase, progesterone takes over. This sudden hormonal shift can raise your core body temperature, disrupt your sleep architecture, and increase sebum production, leading to premenstrual breakouts. Tracking these shifts doesn't just help with family planning; it allows you to sync your lifestyle, skincare routine, and sleep schedule with your natural biological clock.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Track Your Body's Changes</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/pregnancy" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Pregnancy Timeline</span>
+                <span className="text-teal-100/60 text-xs">Successfully conceived? Track your upcoming milestones.</span>
+              </Link>
+              
+              <Link href="/hormonesleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hormonal Sleep</span>
+                <span className="text-teal-100/60 text-xs">See how the luteal phase and progesterone affect your rest.</span>
+              </Link>
+
+              <Link href="/skincare" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Cycle Skincare</span>
+                <span className="text-teal-100/60 text-xs">Adjust your routine for ovulation glow and luteal breakouts.</span>
+              </Link>
+
+              <Link href="/hairhealth" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hair Vitality</span>
+                <span className="text-teal-100/60 text-xs">Understand how post-ovulation hormone drops cause shedding.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

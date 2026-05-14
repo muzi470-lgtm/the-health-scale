@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Coffee } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CaffeineGuide() {
   const [weight, setWeight] = useState('');
@@ -152,6 +153,40 @@ export default function CaffeineGuide() {
               <span><strong className="text-white">The Cut-Off Time:</strong> To protect your restorative deep sleep, aim to consume your last caffeinated drink at least 8 to 10 hours before bedtime.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">Caffeine, Hydration, and Sleep Architecture</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              While caffeine is an incredible tool for cognitive enhancement and workout performance, it is also a mild diuretic. This means that excessive coffee or energy drink consumption can lead to subtle dehydration. Staying optimally hydrated is essential because even a 2% drop in your body's water levels can cause brain fog and fatigue, negating the very benefits you sought from caffeine.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Furthermore, respecting your personal caffeine cutoff time is non-negotiable if you want to maintain healthy sleep architecture. Caffeine blocks adenosine, the neurotransmitter that makes you feel tired. If consumed too late in the day, it drastically reduces your slow-wave (deep) sleep, which is the phase where your body repairs muscle tissue, balances hormones, and consolidates memory.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Balance Your Energy Systems</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/deepsleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Deep Sleep Optimizer</span>
+                <span className="text-teal-100/60 text-xs">Learn how to maximize your restorative sleep phases.</span>
+              </Link>
+              
+              <Link href="/water" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Daily Water Intake</span>
+                <span className="text-teal-100/60 text-xs">Calculate your precise hydration needs to stay energized.</span>
+              </Link>
+
+              <Link href="/workout" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Workout Planner</span>
+                <span className="text-teal-100/60 text-xs">Structure your physical training for maximum vitality.</span>
+              </Link>
+
+              <Link href="/hormonesleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hormone & Sleep Tracker</span>
+                <span className="text-teal-100/60 text-xs">Understand how sleep quality regulates your hormones.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Scissors } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HairHealth() {
   const [shedding, setShedding] = useState(50);
@@ -139,6 +140,40 @@ export default function HairHealth() {
               <span><strong className="text-white">Strand Elasticity:</strong> Healthy hair stretches slightly without snapping. A lack of elasticity often points to a need for protein treatments.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">Hormones, Hydration, and Hair Shedding</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              It is completely normal to lose between 50 to 100 strands of hair a day. However, sudden spikes in shedding are often your body's early warning system for internal imbalances. Hormonal fluctuations play a massive role in your hair's life cycle. For instance, estrogen prolongs the growth phase (anagen) of your hair. When estrogen levels drop significantly—such as during specific phases of your menstrual cycle or the postpartum period—it triggers a massive shift into the shedding phase (telogen effluvium).
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Beyond hormones and iron ferritin levels, chronic dehydration is a silent killer of hair vitality. Your hair shafts are made up of one-quarter water. If you are not consuming adequate fluids, your body prioritizes vital organs over hair follicles, leading to dry, brittle strands that snap easily. Remember, your scalp is an extension of your facial skin; it requires the same internal hydration and topical care to maintain a healthy microbiome.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Address the Root Causes</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/ovulation" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Ovulation Tracker</span>
+                <span className="text-teal-100/60 text-xs">Understand how monthly hormonal shifts affect your hair cycle.</span>
+              </Link>
+              
+              <Link href="/pregnancy" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Pregnancy Timeline</span>
+                <span className="text-teal-100/60 text-xs">Track postpartum changes and hormone-induced shedding.</span>
+              </Link>
+
+              <Link href="/water" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hydration Calculator</span>
+                <span className="text-teal-100/60 text-xs">Ensure your hair follicles receive enough daily water.</span>
+              </Link>
+
+              <Link href="/skincare" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Skincare & Scalp</span>
+                <span className="text-teal-100/60 text-xs">Treat your scalp with the same care as your facial skin.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

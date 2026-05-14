@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Dna } from 'lucide-react';
+import Link from 'next/link';
 
 export default function BiologicalAge() {
   const [actualAge, setActualAge] = useState('');
@@ -160,6 +161,40 @@ export default function BiologicalAge() {
               <span><strong className="text-white">Reversing the Clock:</strong> A higher biological age is a warning, not a life sentence. Consistent healthy habits can reverse this number over time.</span>
             </li>
           </ul>
+          {/* Extended Content & Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">How Lifestyle Impacts Your Vitality</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Our Biological Age Calculator doesn't just guess; it uses key lifestyle metrics to estimate your body's true condition. High chronic stress releases cortisol, which accelerates cellular breakdown. Conversely, regular moderate exercise improves blood flow and heart health, potentially shaving years off your biological age. Your diet plays an equally crucial role. Consuming ultra-processed foods accelerates aging, while a nutrient-dense diet acts as an anti-aging shield.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Understanding this number is the first step in your wellness journey. If your biological age is higher than your chronological age, consider it a wake-up call to adjust your daily routine. Prioritize stress reduction, rethink your dietary choices, and establish a consistent workout regimen to start reversing the clock.
+            </p>
+
+           {/* Contextual Internal Links */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Explore Related Health Tools</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/bmi" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">BMI Calculator</span>
+                <span className="text-teal-100/60 text-xs">Check if your body weight is in a healthy range.</span>
+              </Link>
+              
+              <Link href="/bodyfat" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Body Fat Calculator</span>
+                <span className="text-teal-100/60 text-xs">Estimate your body fat percentage accurately.</span>
+              </Link>
+               
+              <Link href="/tdee" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">TDEE Calculator</span>
+                <span className="text-teal-100/60 text-xs">Find out how many calories you burn daily.</span>
+              </Link>
+              
+              <Link href="/deepsleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Deep Sleep Optimizer</span>
+                <span className="text-teal-100/60 text-xs">Improve your cellular recovery through better sleep.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Scale } from 'lucide-react';
+import Link from 'next/link';
 
 export default function WHRCalculator() {
   const [gender, setGender] = useState('female');
@@ -8,12 +9,12 @@ export default function WHRCalculator() {
   const [hip, setHip] = useState('');
   const [result, setResult] = useState(null);
 
-  const calculateWHR = () => {
+const calculateWHR = () => {
     if (!waist || !hip) return;
     const ratio = (parseFloat(waist) / parseFloat(hip)).toFixed(2);
     
     let risk = "Low";
-    if (gender === 'male') {
+    if (gender === 'male') { // <-- Yeh bracket yahan lagani zaroori thi
       if (ratio >= 0.96 && ratio <= 1.0) risk = "Moderate";
       else if (ratio > 1.0) risk = "High";
     } else {
@@ -119,6 +120,40 @@ export default function WHRCalculator() {
               <span><strong className="text-white">High Risk (Apple Shape):</strong> Indicates higher visceral fat, signaling a need for proactive lifestyle and fitness changes.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">Visceral vs. Subcutaneous Fat</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Not all fat is created equal. Subcutaneous fat (the pinchable fat just under your skin) is relatively harmless. However, a high Waist-to-Hip Ratio strongly indicates an accumulation of visceral fat. This is a dangerous type of active fat that wraps around your major abdominal organs, including your liver and pancreas. Visceral fat actively releases inflammatory cytokines into your bloodstream, heavily contributing to insulin resistance, elevated blood pressure, and a heightened risk of metabolic syndrome.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              The good news is that visceral fat is highly responsive to dietary interventions and cardiovascular training. If your WHR falls into the moderate or high-risk category, establishing a strategic caloric deficit and incorporating regular aerobic exercise can dramatically reduce your abdominal circumference and improve your overall metabolic health.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Take Action on Your Results</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/bodyfat" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Body Fat %</span>
+                <span className="text-teal-100/60 text-xs">Get a complete breakdown of your overall body composition.</span>
+              </Link>
+              
+              <Link href="/tdee" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">TDEE Calories</span>
+                <span className="text-teal-100/60 text-xs">Calculate the exact caloric deficit needed to burn visceral fat.</span>
+              </Link>
+
+              <Link href="/workout" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Workout Planner</span>
+                <span className="text-teal-100/60 text-xs">Design a cardio and lifting routine to lower your ratio.</span>
+              </Link>
+
+              <Link href="/bioage" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Biological Age</span>
+                <span className="text-teal-100/60 text-xs">See if high visceral fat is accelerating your cellular aging.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

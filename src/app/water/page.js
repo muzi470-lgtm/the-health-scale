@@ -115,6 +115,40 @@ export default function WaterCalculator() {
               <span><strong className="text-white">Skin Health:</strong> Consistent hydration flushes out toxins, acting as your best natural skincare.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">The Systemic Impact of Hydration</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Water is the ultimate biological solvent. Beyond simply quenching thirst, precise fluid intake dictates your blood viscosity, which directly impacts how effectively oxygen and vital macronutrients are delivered to your muscle tissues during a workout. If you are operating in a caloric deficit (calculated via your TDEE), drinking enough water is crucial because it facilitates the liver's ability to metabolize stored fat into usable energy.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Furthermore, chronological aging and cellular degradation are accelerated by chronic, low-grade dehydration. Your hair follicles require immense hydration to prevent brittle snapping, while your epidermal cells rely on intracellular water to maintain elasticity and prevent premature wrinkling. To truly maximize your health protocols, hydration must be synchronized with your diet, skincare, and physical training.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Synchronize Your Health Protocols</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/tdee" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">TDEE Calories</span>
+                <span className="text-teal-100/60 text-xs">Hydration naturally boosts your basal metabolic rate.</span>
+              </Link>
+              
+              <Link href="/workout" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Workout Planner</span>
+                <span className="text-teal-100/60 text-xs">Prevent muscle cramps and fatigue during training.</span>
+              </Link>
+
+              <Link href="/skincare" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Skincare Guide</span>
+                <span className="text-teal-100/60 text-xs">Combine topical creams with deep internal hydration.</span>
+              </Link>
+
+              <Link href="/hairhealth" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hair Vitality</span>
+                <span className="text-teal-100/60 text-xs">Support follicle strength by meeting water targets.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

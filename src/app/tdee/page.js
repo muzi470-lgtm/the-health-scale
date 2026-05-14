@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Activity } from 'lucide-react';
+import Link from 'next/link';
 
 export default function TDEECalculator() {
   const [gender, setGender] = useState('male');
@@ -160,6 +161,40 @@ export default function TDEECalculator() {
               <span><strong className="text-white">To Gain Muscle (Bulk):</strong> Create a caloric surplus by adding 200-500 calories above your maintenance level.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">The Science of Energy Balance</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Our calculator uses the highly accurate Mifflin-St Jeor equation to establish your baseline energy needs. However, reaching your fitness goals isn't just about counting raw calories; it's about optimizing your macronutrient split. Protein is essential for muscle protein synthesis and has the highest Thermic Effect of Food (TEF), meaning your body burns more calories simply digesting it. Healthy fats are critical for hormone production, while carbohydrates are your body's preferred fuel source for high-intensity workouts.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Before adjusting your caloric intake, it is highly recommended to understand your starting body composition. A heavy weightlifter and a sedentary person might have the same BMI but completely different body fat percentages, which drastically changes how they should structure their diet. Always pair your nutritional adjustments with a structured training protocol to ensure you are losing fat, not valuable lean muscle mass.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Complete Your Fitness Protocol</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/bodyfat" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Body Fat %</span>
+                <span className="text-teal-100/60 text-xs">Determine your lean mass before starting a cut or bulk.</span>
+              </Link>
+              
+              <Link href="/workout" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Workout Planner</span>
+                <span className="text-teal-100/60 text-xs">Put those calories to work with a structured routine.</span>
+              </Link>
+
+              <Link href="/bmi" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">BMI Calculator</span>
+                <span className="text-teal-100/60 text-xs">Check your general weight category as a starting point.</span>
+              </Link>
+
+              <Link href="/water" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hydration Targets</span>
+                <span className="text-teal-100/60 text-xs">Ensure optimal metabolism with adequate daily water.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

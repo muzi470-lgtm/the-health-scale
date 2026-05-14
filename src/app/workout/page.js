@@ -186,6 +186,40 @@ export default function AdvancedWorkout() {
               <span><strong className="text-white">Optimal Volume:</strong> Hitting the right amount of sets per muscle group weekly to trigger growth without causing overtraining or central nervous system fatigue.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">Fueling & Recovery Mechanisms</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              A grueling workout protocol depletes your intracellular glycogen stores and causes minor muscle tissue damage. To repair this tissue (Muscle Protein Synthesis), your body requires a precise surplus of macronutrients—specifically high-quality protein and carbohydrates. Calculating your exact Daily Energy Expenditure (TDEE) is mandatory; otherwise, you risk either losing hard-earned muscle mass from a severe caloric deficit or gaining unwanted visceral fat from a careless bulk.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Equally critical is the role of deep sleep and hydration. Water acts as the transport system for amino acids to reach torn muscle fibers, preventing severe DOMS (Delayed Onset Muscle Soreness). Meanwhile, human growth hormone (HGH)—the ultimate catalyst for muscular repair—is primarily secreted during the deepest stages of your sleep cycle. Treat your kitchen and your bed with the same intensity as your workouts.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Optimize Your Training Results</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/tdee" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">TDEE Macros</span>
+                <span className="text-teal-100/60 text-xs">Calculate the exact protein and carbs needed for muscle repair.</span>
+              </Link>
+              
+              <Link href="/water" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hydration Tracker</span>
+                <span className="text-teal-100/60 text-xs">Prevent cramps and speed up amino acid delivery to muscles.</span>
+              </Link>
+
+              <Link href="/deepsleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Deep Sleep Target</span>
+                <span className="text-teal-100/60 text-xs">Maximize growth hormone release for faster recovery.</span>
+              </Link>
+
+              <Link href="/whr" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Fat Distribution</span>
+                <span className="text-teal-100/60 text-xs">Track how your workouts are actively reducing visceral fat.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

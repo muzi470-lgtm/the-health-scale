@@ -123,6 +123,40 @@ export default function DeepSleep() {
               <span><strong className="text-white">Optimize Rest:</strong> Aim for 5 to 6 full cycles (7.5 to 9 hours) for optimal cognitive performance and memory.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">The Architecture of Restorative Sleep</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Deep sleep, also known as slow-wave sleep (SWS), is the most restorative phase of your night. During this time, your brain waves slow down significantly, and your body focuses entirely on physical repair. Blood flow to your muscles increases, facilitating tissue growth and cellular regeneration. This is also the critical period when your pituitary gland releases growth hormones, making it the ultimate biological reset button for both your muscles and your skin.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Consistently missing out on deep sleep or interrupting your sleep cycles can wreak havoc on your hormonal balance. It elevates cortisol (the stress hormone) and lowers insulin sensitivity, which can impact your daily energy, your workout recovery, and even your complexion. By aligning your bedtime with natural 90-minute sleep cycles, you avoid the grogginess of sleep inertia and wake up in a state of natural alertness.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Complete Your Recovery Protocol</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/hormonesleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hormone & Sleep</span>
+                <span className="text-teal-100/60 text-xs">Track how your sleep directly influences your hormone levels.</span>
+              </Link>
+              
+              <Link href="/caffeine" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Caffeine Guide</span>
+                <span className="text-teal-100/60 text-xs">Ensure your daily caffeine intake isn't destroying your deep sleep.</span>
+              </Link>
+
+              <Link href="/skincare" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Skincare Routine</span>
+                <span className="text-teal-100/60 text-xs">Optimize your cellular repair for glowing, healthy skin.</span>
+              </Link>
+
+              <Link href="/workout" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Workout Planner</span>
+                <span className="text-teal-100/60 text-xs">Structure workouts so your muscles recover perfectly at night.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

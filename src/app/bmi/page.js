@@ -143,6 +143,40 @@ export default function BMICalculator() {
               <span><strong className="text-white">30.0 & Above:</strong> Obese — Consider consulting a health professional for a tailored plan.</span>
             </li>
           </ul>
+          {/* Extended Content & Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">Beyond The BMI Scale</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              While BMI is a globally recognized standard for categorizing health risks, it's important to understand its limitations. The Body Mass Index calculates your physical mass relative to your height, but it does not differentiate between lean muscle mass, bone density, and visceral fat. For instance, athletes or bodybuilders with high muscle mass might be classified as "overweight" or "obese" despite having very low body fat levels.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              For a comprehensive view of your physiological health, BMI should be used alongside other metrics. Evaluating your body fat percentage and metabolic rate provides a much clearer picture of your internal health. If you are starting a fitness journey, tracking changes in your body composition over time is far more valuable than simply watching the scale.
+            </p>
+
+            {/* Contextual Internal Links */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Next Steps: Complete Your Body Profile</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/bodyfat" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Body Fat Calculator</span>
+                <span className="text-teal-100/60 text-xs">Find out how much of your weight is actual fat.</span>
+              </Link>
+              
+              <Link href="/whr" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">WHR Calculator</span>
+                <span className="text-teal-100/60 text-xs">Assess your heart disease risk using waist-to-hip ratio.</span>
+              </Link>
+
+              <Link href="/tdee" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">TDEE Calculator</span>
+                <span className="text-teal-100/60 text-xs">Calculate your daily calorie needs for weight goals.</span>
+              </Link>
+
+              <Link href="/bioage" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Biological Age Tool</span>
+                <span className="text-teal-100/60 text-xs">See if your body is aging faster than your real age.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

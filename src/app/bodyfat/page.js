@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Flame } from 'lucide-react';
+import Link from 'next/link';
 
 export default function BodyFatCalculator() {
   const [gender, setGender] = useState('male');
@@ -130,6 +131,40 @@ export default function BodyFatCalculator() {
               <span><strong className="text-white">Acceptable Range:</strong> A normal, healthy body composition for the general population (Men: 18-24%, Women: 25-31%).</span>
             </li>
           </ul>
+          {/* Extended Content & Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">The Science Behind The U.S. Navy Method</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Our calculator utilizes the scientifically validated U.S. Navy Body Fat Formula. Instead of relying solely on your total weight, this method measures specific circumferences—your neck, waist, and hips—relative to your height. This approach is highly effective because excess fat tends to accumulate around the waistline (visceral fat) and hips (subcutaneous fat), whereas the neck circumference acts as a stable reference for your overall frame size.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Knowing your fat percentage is critical for long-term metabolic health. High levels of visceral fat are strongly linked to cardiovascular issues and insulin resistance. Whether you are looking to optimize your athletic performance or embark on a weight loss journey, understanding your baseline body composition ensures you are targeting fat loss rather than losing valuable lean muscle mass.
+            </p>
+
+            {/* Contextual Internal Links */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Optimize Your Health Journey</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/bmi" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">BMI Calculator</span>
+                <span className="text-teal-100/60 text-xs">Get a quick overview of your weight-to-height ratio.</span>
+              </Link>
+              
+              <Link href="/whr" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">WHR Calculator</span>
+                <span className="text-teal-100/60 text-xs">Check your waist-to-hip ratio for heart health risks.</span>
+              </Link>
+
+              <Link href="/tdee" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">TDEE Calculator</span>
+                <span className="text-teal-100/60 text-xs">Discover exactly how many calories you burn daily.</span>
+              </Link>
+
+              <Link href="/bioage" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Biological Age Tool</span>
+                <span className="text-teal-100/60 text-xs">Find out how your lifestyle impacts your cellular aging.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

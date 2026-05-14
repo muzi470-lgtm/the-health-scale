@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Bed } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HormoneSleep() {
   const [hours, setHours] = useState(7);
@@ -102,6 +103,40 @@ export default function HormoneSleep() {
               <span><strong className="text-white">Cycle Syncing:</strong> Adjusting your diet and workout intensity based on the four phases of the menstrual cycle to support hormonal homeostasis.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">The Blue Light & Cortisol Seesaw</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Your circadian rhythm is primarily regulated by light exposure. When you look at screens (phones, laptops, TVs) right before bed, the blue light emitted tricks your pineal gland into thinking it is still daytime. This forcefully suppresses the natural release of melatonin, making it incredibly difficult to fall asleep and drastically reducing the quality of your deep sleep phases where critical endocrine repair happens.
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Furthermore, sleep deprivation disrupts your metabolic hormones. Just one night of poor sleep increases ghrelin (your hunger hormone) and decreases leptin (your fullness hormone), leading to intense sugar cravings the next day. By prioritizing a digital sundown and managing late-night stress, you allow cortisol to drop naturally, paving the way for optimal growth hormone release and comprehensive metabolic recovery.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Optimize Your Recovery Stack</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/deepsleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Sleep Cycle Calculator</span>
+                <span className="text-teal-100/60 text-xs">Time your sleep cycles to maximize hormone release.</span>
+              </Link>
+              
+              <Link href="/caffeine" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Caffeine Tracker</span>
+                <span className="text-teal-100/60 text-xs">See how late-day caffeine blocks your sleep receptors.</span>
+              </Link>
+
+              <Link href="/ovulation" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Ovulation Tracker</span>
+                <span className="text-teal-100/60 text-xs">Monitor how your monthly cycle impacts your sleep quality.</span>
+              </Link>
+
+              <Link href="/bioage" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Biological Age Tool</span>
+                <span className="text-teal-100/60 text-xs">Discover if poor sleep is accelerating your cellular aging.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 export default function SkincareGuide() {
   const [skinType, setSkinType] = useState('combination');
@@ -156,6 +157,40 @@ export default function SkincareGuide() {
               <span><strong className="text-white">Protect:</strong> Locking in hydration with a moisturizer and shielding your skin from aging UV rays with a broad-spectrum SPF.</span>
             </li>
           </ul>
+          {/* Extended Content & Fresh Internal Linking */}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-3">The Internal Skin Connection</h3>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-4">
+              Topical treatments only do half the work. Your skin's elasticity, glow, and resistance to breakouts are heavily dictated by your internal biology. For instance, chronic dehydration forces your body to pull water away from the skin to support vital organs, resulting in a dull complexion and accentuated fine lines. Similarly, your skin undergoes intense cellular regeneration during the deep sleep phase. 
+            </p>
+            <p className="text-teal-100/70 text-sm leading-relaxed mb-6">
+              Missing out on this restorative sleep spikes cortisol levels, which breaks down collagen and increases sebum production, causing stress acne. Furthermore, your skin's microbiome and oil production fluctuate drastically with your hormonal cycles (such as during ovulation or pregnancy). To achieve a truly radiant complexion, you must balance your internal hydration, sleep architecture, and endocrine system alongside your topical routine.
+            </p>
+
+            {/* Contextual Internal Links (New Tools) */}
+            <h3 className="text-sm font-bold text-[#CC584C] uppercase tracking-widest mb-3">Enhance Your Internal Glow</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/water" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hydration Calculator</span>
+                <span className="text-teal-100/60 text-xs">Ensure your skin cells get enough water from the inside out.</span>
+              </Link>
+              
+              <Link href="/deepsleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Sleep & Cellular Repair</span>
+                <span className="text-teal-100/60 text-xs">Optimize your deep sleep for maximum collagen production.</span>
+              </Link>
+
+              <Link href="/hormonesleep" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Hormonal Balance</span>
+                <span className="text-teal-100/60 text-xs">Understand how stress and sleep affect hormonal breakouts.</span>
+              </Link>
+
+              <Link href="/bioage" className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#CC584C]/50 transition-all">
+                <span className="block text-white font-bold mb-1">Biological Aging</span>
+                <span className="text-teal-100/60 text-xs">See if your lifestyle is accelerating your skin's aging process.</span>
+              </Link>
+            </div>
+          </div>
         </div>
     </main>
   );
